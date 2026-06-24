@@ -1,6 +1,6 @@
 # LedgerLang Compiler
 
-A compiler for **LedgerLang** — a Domain Specific Language for financial computations and data analysis.
+A compiler for **LedgerLang**, a Domain-Specific Language (DSL) designed for financial computations, portfolio analysis, and accounting-oriented workflows. The project demonstrates compiler design concepts including lexical analysis, parsing, AST construction, intermediate code generation, and target code generation.
 
 ## Language Features
 
@@ -35,6 +35,10 @@ Source (.ledger)
 [Stage 4] Code Generator    →  Executable Python code
 ```
 
+## Requirements
+
+- Python 3.10+
+- No external dependencies required
 ## Usage
 
 ```bash
