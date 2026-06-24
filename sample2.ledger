@@ -1,0 +1,32 @@
+# LedgerLang Sample Program 2 - Portfolio Analysis
+
+PORTFOLIO prices = [100, 250, 80, 320, 150]
+
+VAR budget = 10000
+RATE commission = 0.02
+VAR shares = 40
+
+# Calculate investment cost
+COMPUTE cost = shares * prices[0]
+COMPUTE fee  = cost * commission
+COMPUTE total = cost + fee
+
+IF total > budget THEN
+    WARN "Over budget!"
+ELSE
+    REPORT "Investment is within budget"
+    SHOW total
+END
+
+# Net return simulation
+VAR sell_price = 130
+COMPUTE profit = (sell_price - prices[0]) * shares
+COMPUTE net_profit = profit - fee
+
+SHOW net_profit
+
+IF net_profit > 0 THEN
+    REPORT "Profitable trade"
+ELSE
+    WARN "Loss on trade"
+END

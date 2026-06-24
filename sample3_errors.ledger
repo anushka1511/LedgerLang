@@ -1,0 +1,14 @@
+# LedgerLang Sample Program 3 - Error Demonstration
+# This file contains intentional errors to show error recovery
+
+ACCOUNT balance = 1000
+RATE tax = 0.1
+
+# Missing THEN keyword (syntax error)
+IF balance > 500
+    SHOW balance
+END
+
+# Valid statement - compiler continues after error
+COMPUTE net = balance - (balance * tax)
+SHOW net

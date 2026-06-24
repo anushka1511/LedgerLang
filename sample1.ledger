@@ -1,0 +1,21 @@
+# LedgerLang Sample Program 1 - Personal Finance Calculator
+
+ACCOUNT savings = 5000
+ACCOUNT loan = 20000
+RATE tax = 0.15
+RATE interest = 0.04
+
+# Calculate net savings after tax
+COMPUTE net = savings - (savings * tax)
+
+# Check debt situation
+IF loan > 10000 THEN
+    WARN "High debt detected"
+ELSE
+    REPORT "Debt under control"
+END
+
+SHOW savings
+SHOW loan
+
+
